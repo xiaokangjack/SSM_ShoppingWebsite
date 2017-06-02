@@ -1,0 +1,6 @@
+127.0.0.1 - - [31/May/2017:22:47:05 +0800] "POST /order/create HTTP/1.0" 200 59 http-bio-8084-exec-1 621
+127.0.0.1 - - [31/May/2017:22:51:03 +0800] "POST /order/create HTTP/1.0" 200 59 http-bio-8084-exec-2 125
+127.0.0.1 - - [31/May/2017:22:57:22 +0800] "GET /order/query/31496242263551 HTTP/1.0" 200 1171 http-bio-8084-exec-3 261
+127.0.0.1 - - [31/May/2017:22:59:43 +0800] "GET /order/query/%E5%BC%A0%E5%BF%97%E5%90%9B/1/5 HTTP/1.0" 200 21 http-bio-8084-exec-4 88
+127.0.0.1 - - [31/May/2017:23:00:51 +0800] "GET /order/query/chenxiaokang/1/5 HTTP/1.0" 200 3354 http-bio-8084-exec-5 72
+127.0.0.1 - - [31/May/2017:23:04:04 +0800] "POST /order/changeOrderStatus HTTP/1.0" 200 36 http-bio-8084-exec-6 68

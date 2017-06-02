@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<!-- 定义注解驱动 -->
+	<mvc:annotation-driven>
+	  <mvc:message-converters register-defaults="true">
+	    <!-- 配置一个消息转化器解决中文乱码（将对象序列化为json时默认使用iso-8859-1） 
+	    <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+	      <constructor-arg index="0" value="UTF-8"></constructor-arg>
+	    </bean> --> 
+	    <!-- 设置自定义的消息转化器处理json -->
+	    <bean class="com.enjoyshop.common.spring.exetend.converter.json.CallbackMappingJackson2HttpMessageConverter">
+	       <property name="callbackName" value="callback"></property>
+	    </bean>
+	  </mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!-- 定义Controller的扫描包 -->
+	<!-- 这里的所在容器是springMVC  -->
+	<context:component-scan base-package="com.enjoyshop.manage.controller" />
+
+	<!-- 定义试图解析器 -->
+	<!-- Example: prefix="/WEB-INF/jsp/", suffix=".jsp", viewname="test" -> 
+		"/WEB-INF/jsp/test.jsp" -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- 文件上传解析器,注意id必须是multipartResolver -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 限制文件的最大大小(5M) -->
+		<property name="maxUploadSize" value="5242880" />
+	</bean>
+
+</beans>
