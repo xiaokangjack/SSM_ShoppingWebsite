@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<schema name="example" version="1.5">
+ 
+   <field name="_version_" type="long" indexed="true" stored="true"/>
+
+   <field name="_root_" type="string" indexed="true" stored="false"/>
+
+   <field name="id" type="long" indexed="true" stored="true" required="true" multiValued="false" /> 
+   <field name="title" type="text_ik" indexed="true" stored="true"/>    
+   <field name="sellPoint" type="string" indexed="false" stored="true"/> 
+   <field name="price" type="long" indexed="true" stored="true"/> 
+   <field name="image" type="string" indexed="false" stored="true"/>  
+   <field name="cid" type="long" indexed="true" stored="true"/>   
+   <field name="status" type="int" indexed="true" stored="false"/>
+   <field name="updated" type="long" indexed="true" stored="true"/>   
+ <uniqueKey>id</uniqueKey>
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
+    <fieldType name="int" class="solr.TrieIntField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="long" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
+	<fieldType name="text_ik" class="solr.TextField">   
+     <analyzer class="org.wltea.analyzer.lucene.IKAnalyzer"/>   
+    </fieldType>
+   <solrQueryParser defaultOperator="AND"/>
+
+</schema>
