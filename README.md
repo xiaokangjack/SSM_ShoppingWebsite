@@ -1,6 +1,6 @@
-#小型电商项目
+# #小型电商项目
 
-###主要技术
+# ###主要技术
 
 - 后端技术：spring、SpringMVC、Mybatis
 
@@ -20,7 +20,7 @@
 
 - 版本控制：git
 
-###开发工具和环境
+# ###开发工具和环境
 - Eclipse Java EE IDE for Web Developers. Version: Luna Service Release 1 (4.4.1)，自带maven插件。
 
 - Maven 3.3.9
@@ -37,7 +37,7 @@
 
 - Win7 操作系统
 
-###功能模块
+# ###功能模块
 
 - 后台管理系统：管理商品、订单、类目、商品规格属性、用户管理以及内容发布等功能。详细开发流程。[点我](http://blog.csdn.net/xiaokang123456kao/article/details/72820717)
 
@@ -51,7 +51,7 @@
 
 - 搜索系统：提供商品的搜索功能。详细开发流程。[点我](http://blog.csdn.net/xiaokang123456kao/article/details/72847058)
 
-###OpenMe目录
+# ###OpenMe目录
 - sql目录下是项目中用到的sql语句
 - nginx目录下是nginx的配置文件
 - Solr目录下是enjoyshop这个core文件
