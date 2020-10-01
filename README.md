@@ -14,7 +14,7 @@
 
 - 远程调用技术：httpclient（调用系统服务）
 
-- 数据库：MySQL
+- 数据库：MySQL.
 
 - 服务器： Nginx（web服务器）和tomcat
 
