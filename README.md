@@ -51,7 +51,7 @@
 
 - 搜索系统：提供商品的搜索功能。详细开发流程。[点我](http://blog.csdn.net/xiaokang123456kao/article/details/72847058)
 
-###OpenMe目录
+###OpenThis目录
 - sql目录下是项目中用到的sql语句
 - nginx目录下是nginx的配置文件
 - Solr目录下是enjoyshop这个core文件
