@@ -2,7 +2,7 @@
 
 ###主要技术
 
-- 后端技术：spring、SpringMVC、Mybatis
+- 后端技术：spring、SpringMVC、Mybatis .
 
 - 前端技术：JSP、JSTL、jQuery、Ajax、EasyUI、KindEditor（富文本编辑器）、CSS+DIV
 
